@@ -1,0 +1,11 @@
+---
+-   include: debug.yml
+
+-   name: phidgets play
+    hosts: raspberrypi
+    sudo: yes
+    #handlers:
+        #- include: handlers/nginx.yml
+    roles:
+        - common
+        - phidgets

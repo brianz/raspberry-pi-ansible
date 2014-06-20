@@ -1,0 +1,43 @@
+---
+
+-   name: Install base dev packages
+    apt: pkg={{ item }} state=present
+    tags: system
+    with_items:
+        - cpp
+        - gcc
+        - make
+        - unzip
+        - zip
+        - g++
+        - build-essential
+        - screen
+        - ntp
+        - ntpdate
+        - vim
+        - python-dev
+        - python-setuptools
+
+
+-   name: Install pip
+    easy_install: name=pip
+    tags: system
+
+
+-   name: Install virtualenv
+    pip: name=virtualenv
+    tags:
+        - system
+        - python
+
+-   name: Install virtualenvwrapper
+    pip: name=virtualenvwrapper version=3.5
+    tags:
+        - system
+        - python
+
+
+-   name: Install cronic
+    copy: src=cronic dest=/usr/local/bin/cronic
+          mode=0755 owner=root group=root
+    tags: system

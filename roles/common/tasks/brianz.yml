@@ -1,0 +1,22 @@
+---
+
+-   name: Install dot files
+    sudo: no
+    template: src=/Users/brianz/dev/dot-files.git/{{ item }} dest=~/.{{ item }}
+    with_items:
+        - screenrc
+        - vimrc
+        - bash_aliases
+    tags:
+        - brianz
+
+-   name: Set up BZ authorized_keys
+    authorized_key: user=brianz key="{{ item }}" manage_dir=no
+    with_file:
+        - public_keys/bz-juno
+        - public_keys/bz-kb-mbpro
+    tags:
+        - ssh
+        - brianz
+
+

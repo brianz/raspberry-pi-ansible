@@ -1,0 +1,11 @@
+---
+
+-   hosts: all
+    sudo: yes
+    tasks:
+    - name: Update aptitude
+      apt: upgrade=full update_cache=yes
+      tags:
+        - system
+        - update
+        - bootstrap

@@ -1,0 +1,29 @@
+---
+
+- include: debug.yml
+
+-   hosts: mysql
+    sudo: yes
+    handlers:
+        - include: handlers/mysql.yml
+    roles:
+        - common
+        - mysql
+
+-   hosts: mysqlslave
+    sudo: yes
+    handlers:
+        - include: handlers/mysql.yml
+    roles:
+        - mysqlslave
+    tags:
+        - mysqlslave
+
+-   hosts: mysqlmaster
+    sudo: yes
+    handlers:
+        - include: handlers/mysql.yml
+    roles:
+        - mysqlmaster
+    tags:
+        - mysqlmaster

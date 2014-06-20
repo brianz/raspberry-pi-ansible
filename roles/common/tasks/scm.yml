@@ -1,0 +1,18 @@
+---
+
+-   name: Install git
+    tags:
+        - system
+        - scm
+    apt: pkg={{ item }} state=present
+    with_items:
+        - git-core
+        - git-doc
+
+-   name: Install mercurial
+    tags:
+        - system
+        - scm
+    pip: name=mercurial
+
+
