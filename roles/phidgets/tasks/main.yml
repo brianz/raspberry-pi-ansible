@@ -7,3 +7,9 @@
 
 -   name: Install phidgets source
     script: install_phidgets.sh
+            creates=/usr/lib/libphidget21.so
+
+-   name: Install phidgets python library
+    pip: name='http://www.phidgets.com/downloads/libraries/PhidgetsPython.zip'
+    tags:
+        - python
