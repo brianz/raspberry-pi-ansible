@@ -1,0 +1,4 @@
+-   name: Install raspberry-gpio-python
+    pip: name=raspberry-gpio-python
+    tags:
+        - python
