@@ -1,6 +1,0 @@
--   name: phidgets play
-    hosts: raspberrypi
-    sudo: yes
-    roles:
-        - common
-        - phidgets
