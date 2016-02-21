@@ -1,0 +1,20 @@
+defscrollback 9999
+
+sessionname pi
+
+# hostname, username
+caption always "%{= KC}pi@%H: %{= KY} BRZ : %{= KW}%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+
+screen -t pi_0
+screen -t pi_1
+screen -t pi_2
+screen -t pi_3
+
+bindkey -k kP copy
+
+startup_message off
+
+vbell off
+
+termcap xterm-color 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+terminfo xterm-color 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'

@@ -31,3 +31,13 @@
     tags:
         - system
         - python
+
+-   name: Install dot files
+    sudo: no
+    template: src=templates/{{ item }} dest=~/.{{ item }}
+    with_items:
+        - screenrc
+        - vimrc
+        - bash_aliases
+    tags:
+        - system

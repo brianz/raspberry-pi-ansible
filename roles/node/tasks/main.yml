@@ -1,0 +1,11 @@
+-   name: Install node
+    apt: name={{ item }}
+    with_items:
+        - nodejs
+        - npm
+        - node-semver
+    tags:
+        - node
+        - npm
+
+-   npm: name=http-server global=yes
