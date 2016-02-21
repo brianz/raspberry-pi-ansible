@@ -1,5 +1,3 @@
----
-
 -   name: Install git
     tags:
         - system

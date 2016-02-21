@@ -1,11 +1,6 @@
----
-
-- include: debug.yml
-
 -   hosts: monitoring
     sudo: yes
     roles:
-        #- common
         - newrelic_plugins
     tags:
         - monitoring

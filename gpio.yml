@@ -1,5 +1,0 @@
--   name: gpio play
-    hosts: raspberrypi
-    sudo: yes
-    roles:
-        - gpio

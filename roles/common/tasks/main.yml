@@ -1,6 +1,3 @@
----
-
 -   include: base.yml
 -   include: scm.yml
 -   include: brianz.yml
-

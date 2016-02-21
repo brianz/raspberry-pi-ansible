@@ -1,0 +1,5 @@
+-   name: Install tornado
+    pip: name=tornado
+    tags:
+        - python
+        - tornado

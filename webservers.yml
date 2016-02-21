@@ -1,20 +1,9 @@
----
-# Run this to see system variables
-# ansible -m setup  -i hosts  all
-# public_ip:  ${ansible_eth0.ipv4.address}
-
--   include: debug.yml
-
 -   name: webservers play
-    hosts: webservers
+    hosts: all
     sudo: yes
     handlers:
         - include: handlers/nginx.yml
     roles:
-        - common
-        - supervisor
-        - webservers
-        - { role: newrelic_plugins,
-            plugins: { memcached: true, nginx: true, uwsgi: true },
-            tags: monitoring
-          }
+        - tornado
+        #- common
+        #- supervisor
