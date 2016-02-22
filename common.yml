@@ -1,0 +1,5 @@
+-   name: common play
+    hosts: all
+    sudo: yes
+    roles:
+        - common

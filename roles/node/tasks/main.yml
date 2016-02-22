@@ -8,4 +8,9 @@
         - node
         - npm
 
--   npm: name=http-server global=yes
+-   name: Install npm packages
+    npm: name={{ item }} global=yes
+    with_items:
+        - http-server
+        - gulp
+        - jspm
